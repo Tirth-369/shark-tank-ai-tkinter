@@ -1,0 +1,3126 @@
+{
+  "deal": {
+    "model": "LogisticRegression",
+    "selection_metric": "roc_auc",
+    "comparisons": [
+      {
+        "model": "LogisticRegression",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.6150848658198648,
+            "std": 0.0576552790576978
+          },
+          "pr_auc": {
+            "mean": 0.6684729220410964,
+            "std": 0.06368523224264672
+          },
+          "accuracy": {
+            "mean": 0.5901012373453318,
+            "std": 0.04106077764931097
+          },
+          "precision": {
+            "mean": 0.6350350531716631,
+            "std": 0.044274810577253666
+          },
+          "recall": {
+            "mean": 0.6121739130434782,
+            "std": 0.05806307390161732
+          },
+          "f1": {
+            "mean": 0.6214157025734353,
+            "std": 0.036635978114900554
+          }
+        }
+      },
+      {
+        "model": "RandomForestClassifier",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.614983452598799,
+            "std": 0.03713184114890175
+          },
+          "pr_auc": {
+            "mean": 0.6541873429484029,
+            "std": 0.0264817618784006
+          },
+          "accuracy": {
+            "mean": 0.5774528183977004,
+            "std": 0.03678546819824461
+          },
+          "precision": {
+            "mean": 0.6045717409941684,
+            "std": 0.0268230513957496
+          },
+          "recall": {
+            "mean": 0.6722981366459628,
+            "std": 0.06732812932879917
+          },
+          "f1": {
+            "mean": 0.6356957191489566,
+            "std": 0.03969796116936731
+          }
+        }
+      },
+      {
+        "model": "ExtraTreesClassifier",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.6099321848205865,
+            "std": 0.04500658825481808
+          },
+          "pr_auc": {
+            "mean": 0.6605356948360066,
+            "std": 0.033243143616233276
+          },
+          "accuracy": {
+            "mean": 0.5805899262592176,
+            "std": 0.03132671763218735
+          },
+          "precision": {
+            "mean": 0.6157547086355143,
+            "std": 0.025422114206255262
+          },
+          "recall": {
+            "mean": 0.635072463768116,
+            "std": 0.043626042841480146
+          },
+          "f1": {
+            "mean": 0.6248214508331968,
+            "std": 0.03007093036882599
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "accuracy": 0.4968152866242038,
+      "precision": 0.5384615384615384,
+      "recall": 0.5697674418604651,
+      "f1": 0.5536723163841808,
+      "roc_auc": 0.44841139862430396,
+      "pr_auc": 0.507437989400827,
+      "confusion_matrix": [
+        [
+          29,
+          42
+        ],
+        [
+          37,
+          49
+        ]
+      ],
+      "class_counts": {
+        "negative": 71,
+        "positive": 86
+      },
+      "test_rows": 157
+    },
+    "class_distribution": {
+      "development": {
+        "negative": 284,
+        "positive": 348
+      },
+      "test": {
+        "negative": 71,
+        "positive": 86
+      },
+      "cv_folds": [
+        {
+          "fold": 1,
+          "training": {
+            "negative": 226,
+            "positive": 279
+          },
+          "validation": {
+            "negative": 58,
+            "positive": 69
+          }
+        },
+        {
+          "fold": 2,
+          "training": {
+            "negative": 228,
+            "positive": 278
+          },
+          "validation": {
+            "negative": 56,
+            "positive": 70
+          }
+        },
+        {
+          "fold": 3,
+          "training": {
+            "negative": 227,
+            "positive": 279
+          },
+          "validation": {
+            "negative": 57,
+            "positive": 69
+          }
+        },
+        {
+          "fold": 4,
+          "training": {
+            "negative": 227,
+            "positive": 278
+          },
+          "validation": {
+            "negative": 57,
+            "positive": 70
+          }
+        },
+        {
+          "fold": 5,
+          "training": {
+            "negative": 228,
+            "positive": 278
+          },
+          "validation": {
+            "negative": 56,
+            "positive": 70
+          }
+        }
+      ]
+    },
+    "training_rows": 632,
+    "test_groups": 42,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ],
+    "explanation": {
+      "method": "Absolute linear coefficient",
+      "note": "Associations in the fitted model, not causal effects.",
+      "features": [
+        {
+          "name": "Pitchers State",
+          "importance": 10.192535542562965
+        },
+        {
+          "name": "Industry",
+          "importance": 3.8848825844248824
+        },
+        {
+          "name": "Bootstrapped",
+          "importance": 1.3531994395804556
+        },
+        {
+          "name": "ask_log",
+          "importance": 0.8088979488151691
+        },
+        {
+          "name": "valuation_requested_log",
+          "importance": 0.3996306878724623
+        },
+        {
+          "name": "Yearly Revenue",
+          "importance": 0.3523757527961392
+        },
+        {
+          "name": "Peyush Present",
+          "importance": 0.22650465809094106
+        },
+        {
+          "name": "Anupam Present",
+          "importance": 0.22157592498460066
+        },
+        {
+          "name": "Pitchers Average Age",
+          "importance": 0.20499525225994117
+        },
+        {
+          "name": "SKUs",
+          "importance": 0.19770792958367636
+        }
+      ],
+      "permutation": {
+        "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+        "note": "Computed on development validation folds only. Predictive association, not causation.",
+        "features": [
+          {
+            "name": "ask_log",
+            "mean": 0.06801307112883462,
+            "std": 0.04823541777121065
+          },
+          {
+            "name": "Bootstrapped",
+            "mean": 0.04236752163362161,
+            "std": 0.009567047470716187
+          },
+          {
+            "name": "Yearly Revenue",
+            "mean": 0.013455844431287098,
+            "std": 0.01480732798580149
+          },
+          {
+            "name": "Anupam Present",
+            "mean": 0.007596778499400459,
+            "std": 0.014962904935044074
+          },
+          {
+            "name": "Peyush Present",
+            "mean": 0.006899873848730194,
+            "std": 0.017891060117403428
+          },
+          {
+            "name": "Pitchers Average Age",
+            "mean": 0.004204473428639484,
+            "std": 0.006606290916312873
+          },
+          {
+            "name": "Original Offered Equity",
+            "mean": 0.00410324748712881,
+            "std": 0.009167379000658773
+          },
+          {
+            "name": "valuation_requested_log",
+            "mean": 0.003912158224503888,
+            "std": 0.015710307579908604
+          },
+          {
+            "name": "Valuation Requested",
+            "mean": 0.0029367075920208557,
+            "std": 0.0032513717502738845
+          },
+          {
+            "name": "Pitchers State",
+            "mean": 0.0027658750884731543,
+            "std": 0.019451490288872893
+          }
+        ]
+      }
+    },
+    "split_method": "StratifiedGroupKFold by season and episode",
+    "target": "_deal_target",
+    "target_type": "classification"
+  },
+  "valuation": {
+    "model": "ExtraTreesRegressor",
+    "selection_metric": "r2",
+    "comparisons": [
+      {
+        "model": "Ridge",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": -2.763173441898946,
+            "std": 6.714430308072943
+          },
+          "mae": {
+            "mean": 1724.8389193521348,
+            "std": 712.9367737360999
+          },
+          "rmse": {
+            "mean": 5323.661853031506,
+            "std": 5156.621475395436
+          }
+        }
+      },
+      {
+        "model": "RandomForestRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.5550817239766153,
+            "std": 0.12166710884531051
+          },
+          "mae": {
+            "mean": 1237.7323857747372,
+            "std": 173.4663143220599
+          },
+          "rmse": {
+            "mean": 2350.3597769718967,
+            "std": 654.7014071823066
+          }
+        }
+      },
+      {
+        "model": "ExtraTreesRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.5712749079687761,
+            "std": 0.0813257376315655
+          },
+          "mae": {
+            "mean": 1238.3420212688368,
+            "std": 186.2730132990871
+          },
+          "rmse": {
+            "mean": 2335.1250520097456,
+            "std": 699.4280230443983
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "r2": 0.845344438482347,
+      "mae": 761.6448024868587,
+      "rmse": 1353.2000954323594,
+      "test_rows": 88,
+      "mae_unit": "\u20b9 lakh"
+    },
+    "diagnostics": {
+      "target_min": 0.0,
+      "target_median": 1380.952381,
+      "target_95th_percentile": 8684.999999999993,
+      "target_max": 20000.0,
+      "residual_mean": 174.09900506459363,
+      "residual_std": 1341.9538124368012,
+      "max_absolute_error": 8073.902830803616,
+      "target_range_errors": [
+        {
+          "range": "(-0.001, 985.714]",
+          "samples": 22,
+          "mae": 293.67572960126057,
+          "rmse": 637.9691703899367
+        },
+        {
+          "range": "(985.714, 1380.952]",
+          "samples": 22,
+          "mae": 500.9071649259773,
+          "rmse": 590.1255630246768
+        },
+        {
+          "range": "(1380.952, 2849.25]",
+          "samples": 22,
+          "mae": 607.0580490909759,
+          "rmse": 767.4300517487433
+        },
+        {
+          "range": "(2849.25, 20000.0]",
+          "samples": 22,
+          "mae": 1644.9382663292208,
+          "rmse": 2445.485691285535
+        }
+      ]
+    },
+    "training_rows": 345,
+    "test_groups": 47,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ],
+    "explanation": {
+      "method": "Tree feature importance",
+      "note": "Associations in the fitted model, not causal effects.",
+      "features": [
+        {
+          "name": "valuation_requested_log",
+          "importance": 0.2783386464563983
+        },
+        {
+          "name": "Valuation Requested",
+          "importance": 0.15606010567008477
+        },
+        {
+          "name": "ask_equity_ratio",
+          "importance": 0.14978170056888993
+        },
+        {
+          "name": "Original Offered Equity",
+          "importance": 0.09803939306058676
+        },
+        {
+          "name": "valuation_ask_ratio",
+          "importance": 0.08619627832943311
+        },
+        {
+          "name": "ask_log",
+          "importance": 0.050308863690434975
+        },
+        {
+          "name": "Industry",
+          "importance": 0.03661184690320799
+        },
+        {
+          "name": "Original Ask Amount",
+          "importance": 0.027960790794830104
+        },
+        {
+          "name": "Pitchers State",
+          "importance": 0.018469238296027934
+        },
+        {
+          "name": "Bootstrapped",
+          "importance": 0.014781328397667154
+        }
+      ],
+      "permutation": {
+        "method": "Grouped-CV permutation importance (r2 score decrease)",
+        "note": "Computed on development validation folds only. Predictive association, not causation.",
+        "features": [
+          {
+            "name": "valuation_requested_log",
+            "mean": 0.12660367387258753,
+            "std": 0.06290161560981622
+          },
+          {
+            "name": "Valuation Requested",
+            "mean": 0.05584264948143097,
+            "std": 0.03266189435713115
+          },
+          {
+            "name": "ask_equity_ratio",
+            "mean": 0.03485108960936523,
+            "std": 0.03741192492460008
+          },
+          {
+            "name": "Bootstrapped",
+            "mean": 0.010575774669015062,
+            "std": 0.007145384586260536
+          },
+          {
+            "name": "Vineeta Present",
+            "mean": 0.005962530914826961,
+            "std": 0.008902516201947102
+          },
+          {
+            "name": "Monthly Sales",
+            "mean": 0.004590609985846839,
+            "std": 0.004710207127122676
+          },
+          {
+            "name": "Ritesh Present",
+            "mean": 0.004366520375531712,
+            "std": 0.004413023077309299
+          },
+          {
+            "name": "valuation_ask_ratio",
+            "mean": 0.0030970603928219083,
+            "std": 0.03276357514653982
+          },
+          {
+            "name": "Guest Present",
+            "mean": 0.0022076989695853327,
+            "std": 0.004571913901348944
+          },
+          {
+            "name": "Peyush Present",
+            "mean": 0.0020564889970589844,
+            "std": 0.004322979120238626
+          }
+        ]
+      }
+    },
+    "split_method": "GroupKFold by season and episode",
+    "cv_fold_sizes": [
+      {
+        "fold": 1,
+        "training_rows": 276,
+        "validation_rows": 69,
+        "validation_target_median": 1260.5042019999996
+      },
+      {
+        "fold": 2,
+        "training_rows": 285,
+        "validation_rows": 60,
+        "validation_target_median": 1726.1904765
+      },
+      {
+        "fold": 3,
+        "training_rows": 271,
+        "validation_rows": 74,
+        "validation_target_median": 1339.2857145000003
+      },
+      {
+        "fold": 4,
+        "training_rows": 282,
+        "validation_rows": 63,
+        "validation_target_median": 1499.9999999999998
+      },
+      {
+        "fold": 5,
+        "training_rows": 266,
+        "validation_rows": 79,
+        "validation_target_median": 1384.6153850000005
+      }
+    ],
+    "target": "Deal Valuation",
+    "target_type": "log_regression"
+  },
+  "deal_amount": {
+    "model": "RandomForestRegressor",
+    "selection_metric": "r2",
+    "comparisons": [
+      {
+        "model": "Ridge",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.052554012660821645,
+            "std": 0.10192470503189908
+          },
+          "mae": {
+            "mean": 31.986929335305653,
+            "std": 1.8087460061185603
+          },
+          "rmse": {
+            "mean": 57.25191631871276,
+            "std": 10.653023464170891
+          }
+        }
+      },
+      {
+        "model": "RandomForestRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.24553004462729708,
+            "std": 0.09792863155829333
+          },
+          "mae": {
+            "mean": 27.970836760344547,
+            "std": 2.033242548600773
+          },
+          "rmse": {
+            "mean": 51.40797970358337,
+            "std": 12.134263103936378
+          }
+        }
+      },
+      {
+        "model": "ExtraTreesRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.1972670286630089,
+            "std": 0.0755173922883851
+          },
+          "mae": {
+            "mean": 28.530828991453387,
+            "std": 0.9828208601876309
+          },
+          "rmse": {
+            "mean": 52.76590838054608,
+            "std": 10.095330646002362
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "r2": 0.30888785980047717,
+      "mae": 31.103007849940596,
+      "rmse": 47.48097359480318,
+      "test_rows": 91,
+      "mae_unit": "\u20b9 lakh"
+    },
+    "diagnostics": {
+      "target_min": 0.0,
+      "target_median": 70.0,
+      "target_95th_percentile": 200.0,
+      "target_max": 300.0,
+      "residual_mean": 9.455474441688516,
+      "residual_std": 46.529956550516694,
+      "max_absolute_error": 177.34875070138446,
+      "target_range_errors": [
+        {
+          "range": "(-0.001, 50.0]",
+          "samples": 35,
+          "mae": 18.20253178870365,
+          "rmse": 28.60123165846049
+        },
+        {
+          "range": "(50.0, 70.0]",
+          "samples": 11,
+          "mae": 15.261454382915058,
+          "rmse": 18.179392244030378
+        },
+        {
+          "range": "(70.0, 100.0]",
+          "samples": 29,
+          "mae": 22.04629465381726,
+          "rmse": 28.73149475169239
+        },
+        {
+          "range": "(100.0, 300.0]",
+          "samples": 16,
+          "mae": 86.62915991045003,
+          "rmse": 96.48457635187059
+        }
+      ]
+    },
+    "training_rows": 343,
+    "test_groups": 47,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ],
+    "explanation": {
+      "method": "Tree feature importance",
+      "note": "Associations in the fitted model, not causal effects.",
+      "features": [
+        {
+          "name": "Original Ask Amount",
+          "importance": 0.19348646455002896
+        },
+        {
+          "name": "ask_log",
+          "importance": 0.17765181144913128
+        },
+        {
+          "name": "ask_equity_ratio",
+          "importance": 0.10617375818509937
+        },
+        {
+          "name": "Valuation Requested",
+          "importance": 0.09109729697010849
+        },
+        {
+          "name": "valuation_requested_log",
+          "importance": 0.07666572786912687
+        },
+        {
+          "name": "Started in",
+          "importance": 0.05360428431790355
+        },
+        {
+          "name": "Yearly Revenue",
+          "importance": 0.05089089356618137
+        },
+        {
+          "name": "Pitchers State",
+          "importance": 0.03790224107604999
+        },
+        {
+          "name": "Industry",
+          "importance": 0.026579381510526443
+        },
+        {
+          "name": "Guest Present",
+          "importance": 0.026099075014982032
+        }
+      ],
+      "permutation": {
+        "method": "Grouped-CV permutation importance (r2 score decrease)",
+        "note": "Computed on development validation folds only. Predictive association, not causation.",
+        "features": [
+          {
+            "name": "ask_log",
+            "mean": 0.09766715355638923,
+            "std": 0.0520288220913807
+          },
+          {
+            "name": "Original Ask Amount",
+            "mean": 0.08981426293531489,
+            "std": 0.03812853919194736
+          },
+          {
+            "name": "ask_equity_ratio",
+            "mean": 0.03349123210487345,
+            "std": 0.029480891967022107
+          },
+          {
+            "name": "Started in",
+            "mean": 0.014002148808681706,
+            "std": 0.010195267808427807
+          },
+          {
+            "name": "valuation_requested_log",
+            "mean": 0.0099670853177051,
+            "std": 0.019876928921004074
+          },
+          {
+            "name": "Pitchers State",
+            "mean": 0.009834559051488268,
+            "std": 0.006282337332255182
+          },
+          {
+            "name": "Guest Present",
+            "mean": 0.009503008280044556,
+            "std": 0.023696624974346846
+          },
+          {
+            "name": "Valuation Requested",
+            "mean": 0.007344462007632488,
+            "std": 0.01831812785719354
+          },
+          {
+            "name": "Monthly Sales",
+            "mean": 0.0032605068643291116,
+            "std": 0.009350042544356759
+          },
+          {
+            "name": "Net Margin",
+            "mean": 0.0013700750374622335,
+            "std": 0.007039439853626789
+          }
+        ]
+      }
+    },
+    "split_method": "GroupKFold by season and episode",
+    "cv_fold_sizes": [
+      {
+        "fold": 1,
+        "training_rows": 269,
+        "validation_rows": 74,
+        "validation_target_median": 60.00000000000001
+      },
+      {
+        "fold": 2,
+        "training_rows": 277,
+        "validation_rows": 66,
+        "validation_target_median": 60.00000000000001
+      },
+      {
+        "fold": 3,
+        "training_rows": 274,
+        "validation_rows": 69,
+        "validation_target_median": 75.0
+      },
+      {
+        "fold": 4,
+        "training_rows": 283,
+        "validation_rows": 60,
+        "validation_target_median": 80.00000000000003
+      },
+      {
+        "fold": 5,
+        "training_rows": 269,
+        "validation_rows": 74,
+        "validation_target_median": 60.00000000000001
+      }
+    ],
+    "target": "Total Deal Amount",
+    "target_type": "log_regression"
+  },
+  "deal_equity": {
+    "model": "RandomForestRegressor",
+    "selection_metric": "r2",
+    "comparisons": [
+      {
+        "model": "Ridge",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.10258518684817108,
+            "std": 0.7864065046576761
+          },
+          "mae": {
+            "mean": 3.776074571992987,
+            "std": 0.9018815926243019
+          },
+          "rmse": {
+            "mean": 7.535559207350038,
+            "std": 3.493720116596821
+          }
+        }
+      },
+      {
+        "model": "RandomForestRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.43554279924908706,
+            "std": 0.1936515957314023
+          },
+          "mae": {
+            "mean": 3.4086821827788136,
+            "std": 0.43474610685276016
+          },
+          "rmse": {
+            "mean": 6.2238536649609735,
+            "std": 1.3292310670635534
+          }
+        }
+      },
+      {
+        "model": "ExtraTreesRegressor",
+        "selection_metric": "r2",
+        "cv_metrics": {
+          "r2": {
+            "mean": 0.3684914461515013,
+            "std": 0.2557861918270389
+          },
+          "mae": {
+            "mean": 3.596295395122315,
+            "std": 0.528319251501536
+          },
+          "rmse": {
+            "mean": 6.529006780637215,
+            "std": 1.3113309357413698
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "r2": 0.564767799023927,
+      "mae": 2.9512273813557437,
+      "rmse": 4.765945674822155,
+      "test_rows": 91,
+      "mae_unit": "percentage points"
+    },
+    "diagnostics": {
+      "target_min": 0.5,
+      "target_median": 5.0,
+      "target_95th_percentile": 20.0,
+      "target_max": 50.0,
+      "residual_mean": 0.31602270583753916,
+      "residual_std": 4.755456636827963,
+      "max_absolute_error": 24.46553836654711,
+      "target_range_errors": [
+        {
+          "range": "(0.499, 2.5]",
+          "samples": 25,
+          "mae": 1.695692365159083,
+          "rmse": 2.194905327379536
+        },
+        {
+          "range": "(2.5, 5.0]",
+          "samples": 28,
+          "mae": 1.5342844181637754,
+          "rmse": 2.368501056094454
+        },
+        {
+          "range": "(5.0, 10.0]",
+          "samples": 23,
+          "mae": 3.7672839953019888,
+          "rmse": 4.768959258027017
+        },
+        {
+          "range": "(10.0, 50.0]",
+          "samples": 15,
+          "mae": 6.437459131590946,
+          "rmse": 9.188372183249319
+        }
+      ]
+    },
+    "training_rows": 343,
+    "test_groups": 47,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ],
+    "explanation": {
+      "method": "Tree feature importance",
+      "note": "Associations in the fitted model, not causal effects.",
+      "features": [
+        {
+          "name": "Original Offered Equity",
+          "importance": 0.30535357492644566
+        },
+        {
+          "name": "valuation_ask_ratio",
+          "importance": 0.20910466768534827
+        },
+        {
+          "name": "ask_equity_ratio",
+          "importance": 0.06882053056799198
+        },
+        {
+          "name": "Valuation Requested",
+          "importance": 0.054351659498742176
+        },
+        {
+          "name": "valuation_requested_log",
+          "importance": 0.04754381558539295
+        },
+        {
+          "name": "Yearly Revenue",
+          "importance": 0.03497688267242444
+        },
+        {
+          "name": "Monthly Sales",
+          "importance": 0.02915766142120026
+        },
+        {
+          "name": "Pitchers State",
+          "importance": 0.028825403569842
+        },
+        {
+          "name": "Started in",
+          "importance": 0.02728375994517356
+        },
+        {
+          "name": "Industry",
+          "importance": 0.023463354799509836
+        }
+      ],
+      "permutation": {
+        "method": "Grouped-CV permutation importance (r2 score decrease)",
+        "note": "Computed on development validation folds only. Predictive association, not causation.",
+        "features": [
+          {
+            "name": "Original Offered Equity",
+            "mean": 0.22954786265608487,
+            "std": 0.06323108159485546
+          },
+          {
+            "name": "valuation_ask_ratio",
+            "mean": 0.1330737943637626,
+            "std": 0.0634327717855709
+          },
+          {
+            "name": "ask_equity_ratio",
+            "mean": 0.026441999150423223,
+            "std": 0.03982967546900057
+          },
+          {
+            "name": "Guest Present",
+            "mean": 0.019657911781261323,
+            "std": 0.016676910232353525
+          },
+          {
+            "name": "Ritesh Present",
+            "mean": 0.01936747668730202,
+            "std": 0.008714398379096613
+          },
+          {
+            "name": "Net Margin",
+            "mean": 0.010075213244985667,
+            "std": 0.0077269056582730394
+          },
+          {
+            "name": "Valuation Requested",
+            "mean": 0.00921347274946099,
+            "std": 0.021871334864739602
+          },
+          {
+            "name": "Monthly Sales",
+            "mean": 0.008214258265426079,
+            "std": 0.008277894669152287
+          },
+          {
+            "name": "Started in",
+            "mean": 0.006464736021489936,
+            "std": 0.0087923354717217
+          },
+          {
+            "name": "valuation_requested_log",
+            "mean": 0.006136441586234246,
+            "std": 0.0234916610540399
+          }
+        ]
+      }
+    },
+    "split_method": "GroupKFold by season and episode",
+    "cv_fold_sizes": [
+      {
+        "fold": 1,
+        "training_rows": 269,
+        "validation_rows": 74,
+        "validation_target_median": 5.999999999999999
+      },
+      {
+        "fold": 2,
+        "training_rows": 277,
+        "validation_rows": 66,
+        "validation_target_median": 5.0
+      },
+      {
+        "fold": 3,
+        "training_rows": 274,
+        "validation_rows": 69,
+        "validation_target_median": 3.999999999999999
+      },
+      {
+        "fold": 4,
+        "training_rows": 283,
+        "validation_rows": 60,
+        "validation_target_median": 5.0
+      },
+      {
+        "fold": 5,
+        "training_rows": 269,
+        "validation_rows": 74,
+        "validation_target_median": 3.999999999999999
+      }
+    ],
+    "target": "Total Deal Equity",
+    "target_type": "log_regression"
+  },
+  "shark_investment": {
+    "target": "Individual shark investment",
+    "target_type": "multi_label_classification",
+    "model": "Validation-selected classification pipelines",
+    "metrics": {
+      "Namita": {
+        "model": "LogisticRegression",
+        "selection_metric": "roc_auc",
+        "comparisons": [
+          {
+            "model": "LogisticRegression",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.6859691136286881,
+                "std": 0.0943005823912843
+              },
+              "pr_auc": {
+                "mean": 0.4976878021129834,
+                "std": 0.08113380736605683
+              },
+              "accuracy": {
+                "mean": 0.6245317257337718,
+                "std": 0.10717982851648887
+              },
+              "precision": {
+                "mean": 0.43201357466063345,
+                "std": 0.11671551746032578
+              },
+              "recall": {
+                "mean": 0.5926406926406926,
+                "std": 0.148945431837506
+              },
+              "f1": {
+                "mean": 0.4982230102442869,
+                "std": 0.1279345391353683
+              }
+            }
+          },
+          {
+            "model": "RandomForestClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.6448784962082834,
+                "std": 0.09537934065324498
+              },
+              "pr_auc": {
+                "mean": 0.44353359124779024,
+                "std": 0.10835196028795606
+              },
+              "accuracy": {
+                "mean": 0.6305334307636098,
+                "std": 0.07320290516004643
+              },
+              "precision": {
+                "mean": 0.42513157894736847,
+                "std": 0.23223050535562406
+              },
+              "recall": {
+                "mean": 0.20346320346320348,
+                "std": 0.022020551893263858
+              },
+              "f1": {
+                "mean": 0.2590869830478524,
+                "std": 0.0306226298996281
+              }
+            }
+          },
+          {
+            "model": "ExtraTreesClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.6387528399496485,
+                "std": 0.08964683507575373
+              },
+              "pr_auc": {
+                "mean": 0.4390004671302702,
+                "std": 0.08477088619733596
+              },
+              "accuracy": {
+                "mean": 0.6073023992205577,
+                "std": 0.07628174129140955
+              },
+              "precision": {
+                "mean": 0.3949010457177426,
+                "std": 0.09085696977958037
+              },
+              "recall": {
+                "mean": 0.41688311688311686,
+                "std": 0.03386598652053323
+              },
+              "f1": {
+                "mean": 0.40274418604651163,
+                "std": 0.06133638817922771
+              }
+            }
+          }
+        ],
+        "metrics": {
+          "accuracy": 0.6136363636363636,
+          "precision": 0.43478260869565216,
+          "recall": 0.7142857142857143,
+          "f1": 0.5405405405405406,
+          "roc_auc": 0.6869047619047619,
+          "pr_auc": 0.48265192862953354,
+          "confusion_matrix": [
+            [
+              34,
+              26
+            ],
+            [
+              8,
+              20
+            ]
+          ],
+          "class_counts": {
+            "negative": 60,
+            "positive": 28
+          },
+          "test_rows": 88
+        },
+        "class_distribution": {
+          "development": {
+            "negative": 238,
+            "positive": 108
+          },
+          "test": {
+            "negative": 60,
+            "positive": 28
+          },
+          "cv_folds": [
+            {
+              "fold": 1,
+              "training": {
+                "negative": 190,
+                "positive": 86
+              },
+              "validation": {
+                "negative": 48,
+                "positive": 22
+              }
+            },
+            {
+              "fold": 2,
+              "training": {
+                "negative": 190,
+                "positive": 86
+              },
+              "validation": {
+                "negative": 48,
+                "positive": 22
+              }
+            },
+            {
+              "fold": 3,
+              "training": {
+                "negative": 191,
+                "positive": 87
+              },
+              "validation": {
+                "negative": 47,
+                "positive": 21
+              }
+            },
+            {
+              "fold": 4,
+              "training": {
+                "negative": 190,
+                "positive": 87
+              },
+              "validation": {
+                "negative": 48,
+                "positive": 21
+              }
+            },
+            {
+              "fold": 5,
+              "training": {
+                "negative": 191,
+                "positive": 86
+              },
+              "validation": {
+                "negative": 47,
+                "positive": 22
+              }
+            }
+          ]
+        },
+        "training_rows": 346,
+        "test_groups": 46,
+        "features": [
+          "Started in",
+          "Number of Presenters",
+          "Pitchers Average Age",
+          "Yearly Revenue",
+          "Monthly Sales",
+          "Gross Margin",
+          "Net Margin",
+          "EBITDA",
+          "Cash Burn",
+          "SKUs",
+          "Has Patents",
+          "Original Ask Amount",
+          "Original Offered Equity",
+          "Valuation Requested",
+          "Namita Present",
+          "Vineeta Present",
+          "Anupam Present",
+          "Aman Present",
+          "Peyush Present",
+          "Ritesh Present",
+          "Amit Present",
+          "Guest Present",
+          "ask_log",
+          "valuation_requested_log",
+          "ask_equity_ratio",
+          "valuation_ask_ratio",
+          "sharks_present_count",
+          "Industry",
+          "Pitchers State",
+          "Bootstrapped"
+        ],
+        "explanation": {
+          "method": "Absolute linear coefficient",
+          "note": "Associations in the fitted model, not causal effects.",
+          "features": [
+            {
+              "name": "Industry",
+              "importance": 8.859632079283971
+            },
+            {
+              "name": "Pitchers State",
+              "importance": 7.271330444412588
+            },
+            {
+              "name": "Namita Present",
+              "importance": 1.676272085171258
+            },
+            {
+              "name": "SKUs",
+              "importance": 0.5306644956825071
+            },
+            {
+              "name": "Bootstrapped",
+              "importance": 0.40806934850219667
+            },
+            {
+              "name": "Pitchers Average Age",
+              "importance": 0.3854541882724728
+            },
+            {
+              "name": "Ritesh Present",
+              "importance": 0.35365794833742875
+            },
+            {
+              "name": "Guest Present",
+              "importance": 0.319838395425888
+            },
+            {
+              "name": "Yearly Revenue",
+              "importance": 0.29616135557653295
+            },
+            {
+              "name": "valuation_ask_ratio",
+              "importance": 0.26070495791187076
+            }
+          ],
+          "permutation": {
+            "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+            "note": "Computed on development validation folds only. Predictive association, not causation.",
+            "features": [
+              {
+                "name": "Namita Present",
+                "mean": 0.13950798511968726,
+                "std": 0.06956674365962194
+              },
+              {
+                "name": "Industry",
+                "mean": 0.06182071474624664,
+                "std": 0.04867999402679946
+              },
+              {
+                "name": "Pitchers Average Age",
+                "mean": 0.021949676603931923,
+                "std": 0.029423327611557408
+              },
+              {
+                "name": "Ritesh Present",
+                "mean": 0.018642158668754405,
+                "std": 0.02391680995828953
+              },
+              {
+                "name": "Number of Presenters",
+                "mean": 0.01699262124794041,
+                "std": 0.010630081370766587
+              },
+              {
+                "name": "Original Ask Amount",
+                "mean": 0.012490021798532433,
+                "std": 0.009506765437168397
+              },
+              {
+                "name": "Gross Margin",
+                "mean": 0.010579579994473585,
+                "std": 0.009585541777276933
+              },
+              {
+                "name": "Guest Present",
+                "mean": 0.01029923091093304,
+                "std": 0.012606890277106493
+              },
+              {
+                "name": "Yearly Revenue",
+                "mean": 0.009699963157409952,
+                "std": 0.013007180634292027
+              },
+              {
+                "name": "valuation_requested_log",
+                "mean": 0.009621608690757632,
+                "std": 0.014732838038924074
+              }
+            ]
+          }
+        },
+        "split_method": "StratifiedGroupKFold by season and episode"
+      },
+      "Vineeta": {
+        "model": "LogisticRegression",
+        "selection_metric": "roc_auc",
+        "comparisons": [
+          {
+            "model": "LogisticRegression",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.7412952171285505,
+                "std": 0.07056188383404201
+              },
+              "pr_auc": {
+                "mean": 0.4398391526851125,
+                "std": 0.1213160307826096
+              },
+              "accuracy": {
+                "mean": 0.6623454452203417,
+                "std": 0.057979678870388025
+              },
+              "precision": {
+                "mean": 0.35132967032967033,
+                "std": 0.08220381067538414
+              },
+              "recall": {
+                "mean": 0.615,
+                "std": 0.18400917096710154
+              },
+              "f1": {
+                "mean": 0.44622095620393976,
+                "std": 0.11358066363009761
+              }
+            }
+          },
+          {
+            "model": "RandomForestClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.711683016058016,
+                "std": 0.05918290155844824
+              },
+              "pr_auc": {
+                "mean": 0.38623999126802006,
+                "std": 0.06095982217113331
+              },
+              "accuracy": {
+                "mean": 0.75191908484153,
+                "std": 0.04584341786966027
+              },
+              "precision": {
+                "mean": 0.38111111111111107,
+                "std": 0.15404023844998552
+              },
+              "recall": {
+                "mean": 0.1683333333333333,
+                "std": 0.10234235845109947
+              },
+              "f1": {
+                "mean": 0.22864801864801865,
+                "std": 0.12273990110727881
+              }
+            }
+          },
+          {
+            "model": "ExtraTreesClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.7156242985409651,
+                "std": 0.052620552415242806
+              },
+              "pr_auc": {
+                "mean": 0.438026221890499,
+                "std": 0.0779775140883743
+              },
+              "accuracy": {
+                "mean": 0.7289827284251117,
+                "std": 0.035190236204495476
+              },
+              "precision": {
+                "mean": 0.38420311714429367,
+                "std": 0.09034023253899302
+              },
+              "recall": {
+                "mean": 0.38166666666666665,
+                "std": 0.14339025032717143
+              },
+              "f1": {
+                "mean": 0.3775973103338832,
+                "std": 0.11925117021878508
+              }
+            }
+          }
+        ],
+        "metrics": {
+          "accuracy": 0.6206896551724138,
+          "precision": 0.3142857142857143,
+          "recall": 0.55,
+          "f1": 0.4,
+          "roc_auc": 0.6925373134328359,
+          "pr_auc": 0.37287629168447894,
+          "confusion_matrix": [
+            [
+              43,
+              24
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "class_counts": {
+            "negative": 67,
+            "positive": 20
+          },
+          "test_rows": 87
+        },
+        "class_distribution": {
+          "development": {
+            "negative": 269,
+            "positive": 78
+          },
+          "test": {
+            "negative": 67,
+            "positive": 20
+          },
+          "cv_folds": [
+            {
+              "fold": 1,
+              "training": {
+                "negative": 214,
+                "positive": 62
+              },
+              "validation": {
+                "negative": 55,
+                "positive": 16
+              }
+            },
+            {
+              "fold": 2,
+              "training": {
+                "negative": 217,
+                "positive": 62
+              },
+              "validation": {
+                "negative": 52,
+                "positive": 16
+              }
+            },
+            {
+              "fold": 3,
+              "training": {
+                "negative": 215,
+                "positive": 62
+              },
+              "validation": {
+                "negative": 54,
+                "positive": 16
+              }
+            },
+            {
+              "fold": 4,
+              "training": {
+                "negative": 215,
+                "positive": 63
+              },
+              "validation": {
+                "negative": 54,
+                "positive": 15
+              }
+            },
+            {
+              "fold": 5,
+              "training": {
+                "negative": 215,
+                "positive": 63
+              },
+              "validation": {
+                "negative": 54,
+                "positive": 15
+              }
+            }
+          ]
+        },
+        "training_rows": 347,
+        "test_groups": 48,
+        "features": [
+          "Started in",
+          "Number of Presenters",
+          "Pitchers Average Age",
+          "Yearly Revenue",
+          "Monthly Sales",
+          "Gross Margin",
+          "Net Margin",
+          "EBITDA",
+          "Cash Burn",
+          "SKUs",
+          "Has Patents",
+          "Original Ask Amount",
+          "Original Offered Equity",
+          "Valuation Requested",
+          "Namita Present",
+          "Vineeta Present",
+          "Anupam Present",
+          "Aman Present",
+          "Peyush Present",
+          "Ritesh Present",
+          "Amit Present",
+          "Guest Present",
+          "ask_log",
+          "valuation_requested_log",
+          "ask_equity_ratio",
+          "valuation_ask_ratio",
+          "sharks_present_count",
+          "Industry",
+          "Pitchers State",
+          "Bootstrapped"
+        ],
+        "explanation": {
+          "method": "Absolute linear coefficient",
+          "note": "Associations in the fitted model, not causal effects.",
+          "features": [
+            {
+              "name": "Pitchers State",
+              "importance": 10.492960937799607
+            },
+            {
+              "name": "Industry",
+              "importance": 7.720624301196717
+            },
+            {
+              "name": "Vineeta Present",
+              "importance": 2.152063317899136
+            },
+            {
+              "name": "SKUs",
+              "importance": 0.8866069437650099
+            },
+            {
+              "name": "Original Ask Amount",
+              "importance": 0.8772941564514071
+            },
+            {
+              "name": "Valuation Requested",
+              "importance": 0.756015137492198
+            },
+            {
+              "name": "Bootstrapped",
+              "importance": 0.6595678496895665
+            },
+            {
+              "name": "ask_log",
+              "importance": 0.5693824870961638
+            },
+            {
+              "name": "Yearly Revenue",
+              "importance": 0.5139885178245278
+            },
+            {
+              "name": "Ritesh Present",
+              "importance": 0.47794971117294954
+            }
+          ],
+          "permutation": {
+            "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+            "note": "Computed on development validation folds only. Predictive association, not causation.",
+            "features": [
+              {
+                "name": "Vineeta Present",
+                "mean": 0.1691213596074707,
+                "std": 0.06054776427273638
+              },
+              {
+                "name": "Industry",
+                "mean": 0.026743791188235645,
+                "std": 0.017365893963434274
+              },
+              {
+                "name": "Valuation Requested",
+                "mean": 0.020101261906817477,
+                "std": 0.04206780653963422
+              },
+              {
+                "name": "Net Margin",
+                "mean": 0.014711790267345815,
+                "std": 0.02203049255094077
+              },
+              {
+                "name": "Original Ask Amount",
+                "mean": 0.01321073987740656,
+                "std": 0.02416102731372406
+              },
+              {
+                "name": "Yearly Revenue",
+                "mean": 0.01182122147399929,
+                "std": 0.017548348635508096
+              },
+              {
+                "name": "SKUs",
+                "mean": 0.009299026590693238,
+                "std": 0.02057754085479789
+              },
+              {
+                "name": "Guest Present",
+                "mean": 0.008791098304987203,
+                "std": 0.010682468816731315
+              },
+              {
+                "name": "Amit Present",
+                "mean": 0.007143982560649245,
+                "std": 0.018709651355976
+              },
+              {
+                "name": "sharks_present_count",
+                "mean": 0.004810660018993396,
+                "std": 0.011428888949403006
+              }
+            ]
+          }
+        },
+        "split_method": "StratifiedGroupKFold by season and episode"
+      },
+      "Anupam": {
+        "model": "RandomForestClassifier",
+        "selection_metric": "roc_auc",
+        "comparisons": [
+          {
+            "model": "LogisticRegression",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.5719664390085727,
+                "std": 0.07588470795799876
+              },
+              "pr_auc": {
+                "mean": 0.3263854765600173,
+                "std": 0.05042514548499497
+              },
+              "accuracy": {
+                "mean": 0.5765842568911623,
+                "std": 0.037577334452903594
+              },
+              "precision": {
+                "mean": 0.31600769600769596,
+                "std": 0.04978878242199976
+              },
+              "recall": {
+                "mean": 0.47368421052631576,
+                "std": 0.10526315789473684
+              },
+              "f1": {
+                "mean": 0.37800836760394946,
+                "std": 0.06585322716435714
+              }
+            }
+          },
+          {
+            "model": "RandomForestClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.6623448918792938,
+                "std": 0.10238152946194358
+              },
+              "pr_auc": {
+                "mean": 0.4085477001779269,
+                "std": 0.0972444718669365
+              },
+              "accuracy": {
+                "mean": 0.689002557544757,
+                "std": 0.04830984737848634
+              },
+              "precision": {
+                "mean": 0.3928787878787879,
+                "std": 0.1452132626302082
+              },
+              "recall": {
+                "mean": 0.1894736842105263,
+                "std": 0.06000923289995463
+              },
+              "f1": {
+                "mean": 0.2496386447299226,
+                "std": 0.07876853306737441
+              }
+            }
+          },
+          {
+            "model": "ExtraTreesClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.6362794317329712,
+                "std": 0.07666270912366374
+              },
+              "pr_auc": {
+                "mean": 0.37708128503769395,
+                "std": 0.0653464233240093
+              },
+              "accuracy": {
+                "mean": 0.6570687695368002,
+                "std": 0.03663252752011052
+              },
+              "precision": {
+                "mean": 0.35449174406604744,
+                "std": 0.06962324217987939
+              },
+              "recall": {
+                "mean": 0.3157894736842105,
+                "std": 0.09846466807299846
+              },
+              "f1": {
+                "mean": 0.3316977306790549,
+                "std": 0.0840764882176188
+              }
+            }
+          }
+        ],
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "precision": 0.3076923076923077,
+          "recall": 0.16666666666666666,
+          "f1": 0.21621621621621623,
+          "roc_auc": 0.6402116402116402,
+          "pr_auc": 0.3901082484171183,
+          "confusion_matrix": [
+            [
+              54,
+              9
+            ],
+            [
+              20,
+              4
+            ]
+          ],
+          "class_counts": {
+            "negative": 63,
+            "positive": 24
+          },
+          "test_rows": 87
+        },
+        "class_distribution": {
+          "development": {
+            "negative": 252,
+            "positive": 95
+          },
+          "test": {
+            "negative": 63,
+            "positive": 24
+          },
+          "cv_folds": [
+            {
+              "fold": 1,
+              "training": {
+                "negative": 202,
+                "positive": 76
+              },
+              "validation": {
+                "negative": 50,
+                "positive": 19
+              }
+            },
+            {
+              "fold": 2,
+              "training": {
+                "negative": 202,
+                "positive": 76
+              },
+              "validation": {
+                "negative": 50,
+                "positive": 19
+              }
+            },
+            {
+              "fold": 3,
+              "training": {
+                "negative": 199,
+                "positive": 76
+              },
+              "validation": {
+                "negative": 53,
+                "positive": 19
+              }
+            },
+            {
+              "fold": 4,
+              "training": {
+                "negative": 203,
+                "positive": 76
+              },
+              "validation": {
+                "negative": 49,
+                "positive": 19
+              }
+            },
+            {
+              "fold": 5,
+              "training": {
+                "negative": 202,
+                "positive": 76
+              },
+              "validation": {
+                "negative": 50,
+                "positive": 19
+              }
+            }
+          ]
+        },
+        "training_rows": 347,
+        "test_groups": 47,
+        "features": [
+          "Started in",
+          "Number of Presenters",
+          "Pitchers Average Age",
+          "Yearly Revenue",
+          "Monthly Sales",
+          "Gross Margin",
+          "Net Margin",
+          "EBITDA",
+          "Cash Burn",
+          "SKUs",
+          "Has Patents",
+          "Original Ask Amount",
+          "Original Offered Equity",
+          "Valuation Requested",
+          "Namita Present",
+          "Vineeta Present",
+          "Anupam Present",
+          "Aman Present",
+          "Peyush Present",
+          "Ritesh Present",
+          "Amit Present",
+          "Guest Present",
+          "ask_log",
+          "valuation_requested_log",
+          "ask_equity_ratio",
+          "valuation_ask_ratio",
+          "sharks_present_count",
+          "Industry",
+          "Pitchers State",
+          "Bootstrapped"
+        ],
+        "explanation": {
+          "method": "Tree feature importance",
+          "note": "Associations in the fitted model, not causal effects.",
+          "features": [
+            {
+              "name": "Industry",
+              "importance": 0.07154242650376189
+            },
+            {
+              "name": "ask_equity_ratio",
+              "importance": 0.06876934369035814
+            },
+            {
+              "name": "Started in",
+              "importance": 0.06567893318919632
+            },
+            {
+              "name": "valuation_ask_ratio",
+              "importance": 0.06346055189311232
+            },
+            {
+              "name": "valuation_requested_log",
+              "importance": 0.0624658379116829
+            },
+            {
+              "name": "Valuation Requested",
+              "importance": 0.061408589167103546
+            },
+            {
+              "name": "Pitchers State",
+              "importance": 0.05843113030367447
+            },
+            {
+              "name": "Monthly Sales",
+              "importance": 0.0519537911493053
+            },
+            {
+              "name": "ask_log",
+              "importance": 0.05080817044594754
+            },
+            {
+              "name": "Original Ask Amount",
+              "importance": 0.050265039080553624
+            }
+          ],
+          "permutation": {
+            "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+            "note": "Computed on development validation folds only. Predictive association, not causation.",
+            "features": [
+              {
+                "name": "Anupam Present",
+                "mean": 0.04241177066655855,
+                "std": 0.034364028702023285
+              },
+              {
+                "name": "Started in",
+                "mean": 0.024532247059697733,
+                "std": 0.013541228170604358
+              },
+              {
+                "name": "Monthly Sales",
+                "mean": 0.01797569395186078,
+                "std": 0.008881273421988432
+              },
+              {
+                "name": "Number of Presenters",
+                "mean": 0.010956690918671293,
+                "std": 0.013912830894652355
+              },
+              {
+                "name": "Valuation Requested",
+                "mean": 0.00925134939775312,
+                "std": 0.022387326574407628
+              },
+              {
+                "name": "ask_log",
+                "mean": 0.00845731579622908,
+                "std": 0.01006911914823281
+              },
+              {
+                "name": "ask_equity_ratio",
+                "mean": 0.008419323240716304,
+                "std": 0.02344983586396736
+              },
+              {
+                "name": "Pitchers Average Age",
+                "mean": 0.006806342000553908,
+                "std": 0.006212747265864938
+              },
+              {
+                "name": "Namita Present",
+                "mean": 0.006636834674286803,
+                "std": 0.009136151873641045
+              },
+              {
+                "name": "Original Ask Amount",
+                "mean": 0.0052416215741509795,
+                "std": 0.006809679147022053
+              }
+            ]
+          }
+        },
+        "split_method": "StratifiedGroupKFold by season and episode"
+      },
+      "Aman": {
+        "model": "RandomForestClassifier",
+        "selection_metric": "roc_auc",
+        "comparisons": [
+          {
+            "model": "LogisticRegression",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.5624325373162582,
+                "std": 0.08837590023145737
+              },
+              "pr_auc": {
+                "mean": 0.43068273480134334,
+                "std": 0.05018068105925282
+              },
+              "accuracy": {
+                "mean": 0.5187997550520513,
+                "std": 0.08780464831067952
+              },
+              "precision": {
+                "mean": 0.3819507290095525,
+                "std": 0.10597152974477496
+              },
+              "recall": {
+                "mean": 0.48005698005698,
+                "std": 0.16704367226835917
+              },
+              "f1": {
+                "mean": 0.4245859978063368,
+                "std": 0.13181194645045158
+              }
+            }
+          },
+          {
+            "model": "RandomForestClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.574500257135916,
+                "std": 0.11760624089058065
+              },
+              "pr_auc": {
+                "mean": 0.4676783399560051,
+                "std": 0.0932344459175551
+              },
+              "accuracy": {
+                "mean": 0.5909369259032455,
+                "std": 0.06451684642817522
+              },
+              "precision": {
+                "mean": 0.4333981244671781,
+                "std": 0.1334039765500503
+              },
+              "recall": {
+                "mean": 0.32678062678062675,
+                "std": 0.13842826678672215
+              },
+              "f1": {
+                "mean": 0.369477066973218,
+                "std": 0.13437161885618254
+              }
+            }
+          },
+          {
+            "model": "ExtraTreesClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.5730237606206598,
+                "std": 0.10253913654353708
+              },
+              "pr_auc": {
+                "mean": 0.47232729985230454,
+                "std": 0.10365969311980236
+              },
+              "accuracy": {
+                "mean": 0.5701571749336599,
+                "std": 0.07598589218153756
+              },
+              "precision": {
+                "mean": 0.4191517323775388,
+                "std": 0.10595572899772317
+              },
+              "recall": {
+                "mean": 0.4262108262108262,
+                "std": 0.17135040991837924
+              },
+              "f1": {
+                "mean": 0.4194842165447925,
+                "std": 0.1378663849698242
+              }
+            }
+          }
+        ],
+        "metrics": {
+          "accuracy": 0.632183908045977,
+          "precision": 0.5,
+          "recall": 0.4375,
+          "f1": 0.4666666666666667,
+          "roc_auc": 0.6715909090909091,
+          "pr_auc": 0.5033131955836666,
+          "confusion_matrix": [
+            [
+              41,
+              14
+            ],
+            [
+              18,
+              14
+            ]
+          ],
+          "class_counts": {
+            "negative": 55,
+            "positive": 32
+          },
+          "test_rows": 87
+        },
+        "class_distribution": {
+          "development": {
+            "negative": 216,
+            "positive": 131
+          },
+          "test": {
+            "negative": 55,
+            "positive": 32
+          },
+          "cv_folds": [
+            {
+              "fold": 1,
+              "training": {
+                "negative": 173,
+                "positive": 105
+              },
+              "validation": {
+                "negative": 43,
+                "positive": 26
+              }
+            },
+            {
+              "fold": 2,
+              "training": {
+                "negative": 174,
+                "positive": 104
+              },
+              "validation": {
+                "negative": 42,
+                "positive": 27
+              }
+            },
+            {
+              "fold": 3,
+              "training": {
+                "negative": 173,
+                "positive": 105
+              },
+              "validation": {
+                "negative": 43,
+                "positive": 26
+              }
+            },
+            {
+              "fold": 4,
+              "training": {
+                "negative": 171,
+                "positive": 105
+              },
+              "validation": {
+                "negative": 45,
+                "positive": 26
+              }
+            },
+            {
+              "fold": 5,
+              "training": {
+                "negative": 173,
+                "positive": 105
+              },
+              "validation": {
+                "negative": 43,
+                "positive": 26
+              }
+            }
+          ]
+        },
+        "training_rows": 347,
+        "test_groups": 47,
+        "features": [
+          "Started in",
+          "Number of Presenters",
+          "Pitchers Average Age",
+          "Yearly Revenue",
+          "Monthly Sales",
+          "Gross Margin",
+          "Net Margin",
+          "EBITDA",
+          "Cash Burn",
+          "SKUs",
+          "Has Patents",
+          "Original Ask Amount",
+          "Original Offered Equity",
+          "Valuation Requested",
+          "Namita Present",
+          "Vineeta Present",
+          "Anupam Present",
+          "Aman Present",
+          "Peyush Present",
+          "Ritesh Present",
+          "Amit Present",
+          "Guest Present",
+          "ask_log",
+          "valuation_requested_log",
+          "ask_equity_ratio",
+          "valuation_ask_ratio",
+          "sharks_present_count",
+          "Industry",
+          "Pitchers State",
+          "Bootstrapped"
+        ],
+        "explanation": {
+          "method": "Tree feature importance",
+          "note": "Associations in the fitted model, not causal effects.",
+          "features": [
+            {
+              "name": "Pitchers State",
+              "importance": 0.07524688773712501
+            },
+            {
+              "name": "valuation_ask_ratio",
+              "importance": 0.06661994218622448
+            },
+            {
+              "name": "ask_equity_ratio",
+              "importance": 0.0648767125028268
+            },
+            {
+              "name": "Aman Present",
+              "importance": 0.06353942278244583
+            },
+            {
+              "name": "valuation_requested_log",
+              "importance": 0.06259117327729571
+            },
+            {
+              "name": "Industry",
+              "importance": 0.06237873261419993
+            },
+            {
+              "name": "Valuation Requested",
+              "importance": 0.05795948954033461
+            },
+            {
+              "name": "Started in",
+              "importance": 0.054476023800263756
+            },
+            {
+              "name": "Yearly Revenue",
+              "importance": 0.05124023131925474
+            },
+            {
+              "name": "Monthly Sales",
+              "importance": 0.047938671667911915
+            }
+          ],
+          "permutation": {
+            "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+            "note": "Computed on development validation folds only. Predictive association, not causation.",
+            "features": [
+              {
+                "name": "Aman Present",
+                "mean": 0.07584100271438769,
+                "std": 0.02012811657470619
+              },
+              {
+                "name": "Pitchers Average Age",
+                "mean": 0.018162419454409107,
+                "std": 0.038213394838208334
+              },
+              {
+                "name": "valuation_requested_log",
+                "mean": 0.008654721677977442,
+                "std": 0.014080866127937974
+              },
+              {
+                "name": "ask_equity_ratio",
+                "mean": 0.00846171724724694,
+                "std": 0.00850620847819212
+              },
+              {
+                "name": "Vineeta Present",
+                "mean": 0.005917049741339116,
+                "std": 0.0025777591927841283
+              },
+              {
+                "name": "Monthly Sales",
+                "mean": 0.005493580015543823,
+                "std": 0.003326837541604788
+              },
+              {
+                "name": "Valuation Requested",
+                "mean": 0.005417333169271154,
+                "std": 0.009871131760262787
+              },
+              {
+                "name": "Namita Present",
+                "mean": 0.0012328431449878125,
+                "std": 0.003249795920088158
+              },
+              {
+                "name": "SKUs",
+                "mean": 0.0006285684838656177,
+                "std": 0.0032040363256192034
+              },
+              {
+                "name": "Ritesh Present",
+                "mean": 0.0005670451665283498,
+                "std": 0.005340984726781727
+              }
+            ]
+          }
+        },
+        "split_method": "StratifiedGroupKFold by season and episode"
+      },
+      "Peyush": {
+        "model": "LogisticRegression",
+        "selection_metric": "roc_auc",
+        "comparisons": [
+          {
+            "model": "LogisticRegression",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.8118163361538777,
+                "std": 0.07171879167895016
+              },
+              "pr_auc": {
+                "mean": 0.5558775177158919,
+                "std": 0.12610455473733756
+              },
+              "accuracy": {
+                "mean": 0.7124053099500669,
+                "std": 0.0604929513159629
+              },
+              "precision": {
+                "mean": 0.43799533799533796,
+                "std": 0.08219221314950126
+              },
+              "recall": {
+                "mean": 0.7323529411764705,
+                "std": 0.1604727822430659
+              },
+              "f1": {
+                "mean": 0.5444395604395604,
+                "std": 0.09684341053773471
+              }
+            }
+          },
+          {
+            "model": "RandomForestClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.8080499449013601,
+                "std": 0.0572174006070069
+              },
+              "pr_auc": {
+                "mean": 0.5329116587354386,
+                "std": 0.10038281911550359
+              },
+              "accuracy": {
+                "mean": 0.7495883570819633,
+                "std": 0.03902869219922224
+              },
+              "precision": {
+                "mean": 0.4723809523809524,
+                "std": 0.10634683721597113
+              },
+              "recall": {
+                "mean": 0.4,
+                "std": 0.09704071800825205
+              },
+              "f1": {
+                "mean": 0.4284447004608295,
+                "std": 0.08890979657011855
+              }
+            }
+          },
+          {
+            "model": "ExtraTreesClassifier",
+            "selection_metric": "roc_auc",
+            "cv_metrics": {
+              "roc_auc": {
+                "mean": 0.7955639863589365,
+                "std": 0.04952478245830985
+              },
+              "pr_auc": {
+                "mean": 0.5041140644937049,
+                "std": 0.06195285684609944
+              },
+              "accuracy": {
+                "mean": 0.7266069906223358,
+                "std": 0.04609543853724451
+              },
+              "precision": {
+                "mean": 0.4407177033492823,
+                "std": 0.08207143434882133
+              },
+              "recall": {
+                "mean": 0.5367647058823529,
+                "std": 0.0678405959089924
+              },
+              "f1": {
+                "mean": 0.4828612070717334,
+                "std": 0.07420509845602671
+              }
+            }
+          }
+        ],
+        "metrics": {
+          "accuracy": 0.7701149425287356,
+          "precision": 0.5161290322580645,
+          "recall": 0.7619047619047619,
+          "f1": 0.6153846153846154,
+          "roc_auc": 0.8694083694083694,
+          "pr_auc": 0.5682084719803543,
+          "confusion_matrix": [
+            [
+              51,
+              15
+            ],
+            [
+              5,
+              16
+            ]
+          ],
+          "class_counts": {
+            "negative": 66,
+            "positive": 21
+          },
+          "test_rows": 87
+        },
+        "class_distribution": {
+          "development": {
+            "negative": 265,
+            "positive": 82
+          },
+          "test": {
+            "negative": 66,
+            "positive": 21
+          },
+          "cv_folds": [
+            {
+              "fold": 1,
+              "training": {
+                "negative": 212,
+                "positive": 65
+              },
+              "validation": {
+                "negative": 53,
+                "positive": 17
+              }
+            },
+            {
+              "fold": 2,
+              "training": {
+                "negative": 213,
+                "positive": 66
+              },
+              "validation": {
+                "negative": 52,
+                "positive": 16
+              }
+            },
+            {
+              "fold": 3,
+              "training": {
+                "negative": 213,
+                "positive": 65
+              },
+              "validation": {
+                "negative": 52,
+                "positive": 17
+              }
+            },
+            {
+              "fold": 4,
+              "training": {
+                "negative": 211,
+                "positive": 66
+              },
+              "validation": {
+                "negative": 54,
+                "positive": 16
+              }
+            },
+            {
+              "fold": 5,
+              "training": {
+                "negative": 211,
+                "positive": 66
+              },
+              "validation": {
+                "negative": 54,
+                "positive": 16
+              }
+            }
+          ]
+        },
+        "training_rows": 347,
+        "test_groups": 48,
+        "features": [
+          "Started in",
+          "Number of Presenters",
+          "Pitchers Average Age",
+          "Yearly Revenue",
+          "Monthly Sales",
+          "Gross Margin",
+          "Net Margin",
+          "EBITDA",
+          "Cash Burn",
+          "SKUs",
+          "Has Patents",
+          "Original Ask Amount",
+          "Original Offered Equity",
+          "Valuation Requested",
+          "Namita Present",
+          "Vineeta Present",
+          "Anupam Present",
+          "Aman Present",
+          "Peyush Present",
+          "Ritesh Present",
+          "Amit Present",
+          "Guest Present",
+          "ask_log",
+          "valuation_requested_log",
+          "ask_equity_ratio",
+          "valuation_ask_ratio",
+          "sharks_present_count",
+          "Industry",
+          "Pitchers State",
+          "Bootstrapped"
+        ],
+        "explanation": {
+          "method": "Absolute linear coefficient",
+          "note": "Associations in the fitted model, not causal effects.",
+          "features": [
+            {
+              "name": "Industry",
+              "importance": 6.039440530978721
+            },
+            {
+              "name": "Pitchers State",
+              "importance": 5.884323876789252
+            },
+            {
+              "name": "Peyush Present",
+              "importance": 2.606328480327017
+            },
+            {
+              "name": "Valuation Requested",
+              "importance": 1.0542859782886336
+            },
+            {
+              "name": "Ritesh Present",
+              "importance": 0.827536929960781
+            },
+            {
+              "name": "Pitchers Average Age",
+              "importance": 0.6637006524478498
+            },
+            {
+              "name": "Yearly Revenue",
+              "importance": 0.6257864071369806
+            },
+            {
+              "name": "Namita Present",
+              "importance": 0.6063390020406247
+            },
+            {
+              "name": "Guest Present",
+              "importance": 0.4406391220263974
+            },
+            {
+              "name": "Number of Presenters",
+              "importance": 0.4238041192572113
+            }
+          ],
+          "permutation": {
+            "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+            "note": "Computed on development validation folds only. Predictive association, not causation.",
+            "features": [
+              {
+                "name": "Peyush Present",
+                "mean": 0.23723526104792284,
+                "std": 0.05333401594714974
+              },
+              {
+                "name": "Pitchers Average Age",
+                "mean": 0.024261629475743354,
+                "std": 0.013377410554924632
+              },
+              {
+                "name": "Valuation Requested",
+                "mean": 0.02024455061011658,
+                "std": 0.030694700534831115
+              },
+              {
+                "name": "Number of Presenters",
+                "mean": 0.015824765507987785,
+                "std": 0.02333752693157662
+              },
+              {
+                "name": "Ritesh Present",
+                "mean": 0.00854407047988247,
+                "std": 0.02128827938489538
+              },
+              {
+                "name": "Monthly Sales",
+                "mean": 0.006169562177932476,
+                "std": 0.02174164674014889
+              },
+              {
+                "name": "Namita Present",
+                "mean": 0.004580832023719483,
+                "std": 0.03113858111893707
+              },
+              {
+                "name": "Gross Margin",
+                "mean": 0.004301554250684799,
+                "std": 0.011042083940435071
+              },
+              {
+                "name": "Anupam Present",
+                "mean": 0.003677870452056512,
+                "std": 0.0071765913275770865
+              },
+              {
+                "name": "Industry",
+                "mean": 0.0028668255857951922,
+                "std": 0.015206790382622619
+              }
+            ]
+          }
+        },
+        "split_method": "StratifiedGroupKFold by season and episode"
+      }
+    },
+    "training_rows": 434,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ]
+  },
+  "founder_acceptance": {
+    "model": "RandomForestClassifier",
+    "selection_metric": "roc_auc",
+    "comparisons": [
+      {
+        "model": "LogisticRegression",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.604801290213055,
+            "std": 0.09092433887640217
+          },
+          "pr_auc": {
+            "mean": 0.9070916391129613,
+            "std": 0.017373618875937972
+          },
+          "accuracy": {
+            "mean": 0.6468600562587904,
+            "std": 0.06801027166327003
+          },
+          "precision": {
+            "mean": 0.8770177390284051,
+            "std": 0.033874843909215455
+          },
+          "recall": {
+            "mean": 0.6857703081232494,
+            "std": 0.06069175464515153
+          },
+          "f1": {
+            "mean": 0.7692210537876499,
+            "std": 0.05040567747406289
+          }
+        }
+      },
+      {
+        "model": "RandomForestClassifier",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.6598559655746357,
+            "std": 0.05333532036027244
+          },
+          "pr_auc": {
+            "mean": 0.9254368522131038,
+            "std": 0.01126528042257616
+          },
+          "accuracy": {
+            "mean": 0.8533563838099705,
+            "std": 0.014764681608246203
+          },
+          "precision": {
+            "mean": 0.8675910648312379,
+            "std": 0.01430687560968973
+          },
+          "recall": {
+            "mean": 0.9798745585190598,
+            "std": 0.007711527138394794
+          },
+          "f1": {
+            "mean": 0.9202457958574929,
+            "std": 0.007793003695412655
+          }
+        }
+      },
+      {
+        "model": "ExtraTreesClassifier",
+        "selection_metric": "roc_auc",
+        "cv_metrics": {
+          "roc_auc": {
+            "mean": 0.6044051328041098,
+            "std": 0.10774906915415883
+          },
+          "pr_auc": {
+            "mean": 0.9079360715422833,
+            "std": 0.02639162808194023
+          },
+          "accuracy": {
+            "mean": 0.8284481950304736,
+            "std": 0.02773815362319474
+          },
+          "precision": {
+            "mean": 0.8766024299880135,
+            "std": 0.02354909892193896
+          },
+          "recall": {
+            "mean": 0.9336585068810133,
+            "std": 0.03599380426767861
+          },
+          "f1": {
+            "mean": 0.9036841585682701,
+            "std": 0.016316927084437452
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "accuracy": 0.83,
+      "precision": 0.8723404255319149,
+      "recall": 0.9425287356321839,
+      "f1": 0.9060773480662984,
+      "roc_auc": 0.7091069849690539,
+      "pr_auc": 0.9315143297530256,
+      "confusion_matrix": [
+        [
+          1,
+          12
+        ],
+        [
+          5,
+          82
+        ]
+      ],
+      "class_counts": {
+        "negative": 13,
+        "positive": 87
+      },
+      "test_rows": 100
+    },
+    "class_distribution": {
+      "development": {
+        "negative": 55,
+        "positive": 347
+      },
+      "test": {
+        "negative": 13,
+        "positive": 87
+      },
+      "cv_folds": [
+        {
+          "fold": 1,
+          "training": {
+            "negative": 43,
+            "positive": 278
+          },
+          "validation": {
+            "negative": 12,
+            "positive": 69
+          }
+        },
+        {
+          "fold": 2,
+          "training": {
+            "negative": 44,
+            "positive": 279
+          },
+          "validation": {
+            "negative": 11,
+            "positive": 68
+          }
+        },
+        {
+          "fold": 3,
+          "training": {
+            "negative": 45,
+            "positive": 277
+          },
+          "validation": {
+            "negative": 10,
+            "positive": 70
+          }
+        },
+        {
+          "fold": 4,
+          "training": {
+            "negative": 44,
+            "positive": 277
+          },
+          "validation": {
+            "negative": 11,
+            "positive": 70
+          }
+        },
+        {
+          "fold": 5,
+          "training": {
+            "negative": 44,
+            "positive": 277
+          },
+          "validation": {
+            "negative": 11,
+            "positive": 70
+          }
+        }
+      ]
+    },
+    "training_rows": 402,
+    "test_groups": 50,
+    "features": [
+      "Started in",
+      "Number of Presenters",
+      "Pitchers Average Age",
+      "Yearly Revenue",
+      "Monthly Sales",
+      "Gross Margin",
+      "Net Margin",
+      "EBITDA",
+      "Cash Burn",
+      "SKUs",
+      "Has Patents",
+      "Original Ask Amount",
+      "Original Offered Equity",
+      "Valuation Requested",
+      "Namita Present",
+      "Vineeta Present",
+      "Anupam Present",
+      "Aman Present",
+      "Peyush Present",
+      "Ritesh Present",
+      "Amit Present",
+      "Guest Present",
+      "ask_log",
+      "valuation_requested_log",
+      "ask_equity_ratio",
+      "valuation_ask_ratio",
+      "sharks_present_count",
+      "Industry",
+      "Pitchers State",
+      "Bootstrapped"
+    ],
+    "explanation": {
+      "method": "Tree feature importance",
+      "note": "Associations in the fitted model, not causal effects.",
+      "features": [
+        {
+          "name": "Started in",
+          "importance": 0.07689162859595204
+        },
+        {
+          "name": "Yearly Revenue",
+          "importance": 0.07190127171083674
+        },
+        {
+          "name": "Industry",
+          "importance": 0.07014993373694937
+        },
+        {
+          "name": "Pitchers State",
+          "importance": 0.06863640914359763
+        },
+        {
+          "name": "valuation_ask_ratio",
+          "importance": 0.06449910221138684
+        },
+        {
+          "name": "ask_equity_ratio",
+          "importance": 0.06445992683389411
+        },
+        {
+          "name": "Valuation Requested",
+          "importance": 0.06073050367884972
+        },
+        {
+          "name": "valuation_requested_log",
+          "importance": 0.05966915212085031
+        },
+        {
+          "name": "Bootstrapped",
+          "importance": 0.05862225512963289
+        },
+        {
+          "name": "Monthly Sales",
+          "importance": 0.056552750435053076
+        }
+      ],
+      "permutation": {
+        "method": "Grouped-CV permutation importance (roc_auc score decrease)",
+        "note": "Computed on development validation folds only. Predictive association, not causation.",
+        "features": [
+          {
+            "name": "Bootstrapped",
+            "mean": 0.025895742223107955,
+            "std": 0.015021823959127717
+          },
+          {
+            "name": "Yearly Revenue",
+            "mean": 0.0217284746133851,
+            "std": 0.049849781448892266
+          },
+          {
+            "name": "Number of Presenters",
+            "mean": 0.0052502715622920375,
+            "std": 0.005703892960573486
+          },
+          {
+            "name": "Original Ask Amount",
+            "mean": 0.005033831187283897,
+            "std": 0.014755928001366497
+          },
+          {
+            "name": "Monthly Sales",
+            "mean": 0.004195106588968489,
+            "std": 0.004993181539662832
+          },
+          {
+            "name": "Pitchers State",
+            "mean": 0.003583812796088999,
+            "std": 0.009318780423070314
+          },
+          {
+            "name": "SKUs",
+            "mean": 0.002042136134207769,
+            "std": 0.0031483935220687044
+          },
+          {
+            "name": "Started in",
+            "mean": 0.0020102990691226222,
+            "std": 0.024122091899587736
+          },
+          {
+            "name": "Pitchers Average Age",
+            "mean": 0.0014850096384623353,
+            "std": 0.007573260868287288
+          },
+          {
+            "name": "ask_log",
+            "mean": 0.0007591811428128588,
+            "std": 0.014557641065813972
+          }
+        ]
+      }
+    },
+    "split_method": "StratifiedGroupKFold by season and episode",
+    "target": "_accept_target",
+    "target_type": "classification"
+  }
+}
